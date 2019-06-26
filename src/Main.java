@@ -14,15 +14,41 @@ public class Main
         for (Duck duck : duckList)
         {
             System.out.println("**** " + duck.getClass() + " ****");
-            System.out.print("Display method: ");
-            duck.display();
-            System.out.print("Quack method: ");
-            duck.quack();
-            System.out.print("Swim method: ");
-            duck.swim();
-            System.out.print("Fly method: ");
-            duck.fly();
+            printDisplayMethod(duck);
+            printQuackMethod(duck);
+            printSwimMethod(duck);
+            printFlyMethod(duck);
             System.out.println();
+        }
+    }
+
+    private static void printDisplayMethod(Duck duck) {
+        System.out.print("Display method: ");
+        duck.display();
+    }
+
+    private static void printQuackMethod(Duck duck) {
+        System.out.print("Quack method: ");
+        if(duck instanceof Quackable)
+        {
+            ((Quackable)duck).quack();
+        } else {
+            System.out.println("<< No such method >>");
+        }
+    }
+
+    private static void printSwimMethod(Duck duck) {
+        System.out.print("Swim method: ");
+        duck.swim();
+    }
+
+    private static void printFlyMethod(Duck duck) {
+        System.out.print("Fly method: ");
+        if(duck instanceof Flyable)
+        {
+            ((Flyable)duck).fly();
+        } else {
+            System.out.println("<< No such method >>");
         }
     }
 }
