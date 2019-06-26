@@ -1,15 +1,12 @@
-public abstract class Duck
-{
+public abstract class Duck {
 
-    public Duck()
-    {
+    public Duck() {
 
     }
 
     public abstract void display();
 
-    public void swim()
-    {
+    public void swim() {
         System.out.println("All ducks float, even decoys!");
     }
 
