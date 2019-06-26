@@ -1,6 +1,12 @@
+package ducks;
+
+import behaviors.fly.FlyNoWay;
+import behaviors.quack.MuteQuack;
+
 public class DecoyDuck extends Duck {
     public DecoyDuck() {
-
+        flyBehavior = new FlyNoWay();
+        quackBehavior = new MuteQuack();
     }
 
     @Override

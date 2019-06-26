@@ -1,12 +1,12 @@
-public class RubberDuck extends Duck implements Quackable {
+package ducks;
 
+import behaviors.fly.FlyNoWay;
+import behaviors.quack.Squeak;
+
+public class RubberDuck extends Duck {
     public RubberDuck() {
-
-    }
-
-    @Override
-    public void quack() {
-        System.out.println("Squeak");
+        flyBehavior = new FlyNoWay();
+        quackBehavior = new Squeak();
     }
 
     @Override
