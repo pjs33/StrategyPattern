@@ -9,6 +9,7 @@ public class Main
         duckList.add(new MallardDuck());
         duckList.add(new RedheadDuck());
         duckList.add(new RubberDuck());
+        duckList.add(new DecoyDuck());
 
         for (Duck duck : duckList)
         {
@@ -19,6 +20,8 @@ public class Main
             duck.quack();
             System.out.print("Swim method: ");
             duck.swim();
+            System.out.print("Fly method: ");
+            duck.fly();
             System.out.println();
         }
     }

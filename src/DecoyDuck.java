@@ -1,6 +1,6 @@
-public class RubberDuck extends Duck{
-
-    public RubberDuck()
+public class DecoyDuck extends Duck
+{
+    public DecoyDuck()
     {
 
     }
@@ -14,12 +14,12 @@ public class RubberDuck extends Duck{
     @Override
     public void quack()
     {
-        System.out.println("Squeak");
+        System.out.println("<< Silence >>");
     }
 
     @Override
     public void display()
     {
-        System.out.println("I'm a rubber duck");
+        System.out.println("I'm a decoy duck");
     }
 }
